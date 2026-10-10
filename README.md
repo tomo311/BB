@@ -7,10 +7,10 @@
 JSONを`fetch`で読み込むため、HTMLファイルを直接開かず、簡単なHTTPサーバーを使います。
 
 ```sh
-python3 -m http.server 8000
+python3 -m http.server 8001
 ```
 
-起動後、`http://localhost:8000/`を開きます。
+起動後、`http://localhost:8001/`を開きます。
 
 ## 技術を追加する
 
