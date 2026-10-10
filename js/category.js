@@ -29,9 +29,7 @@ async function loadCategory() {
 
 function renderCategory(data) {
   document.title = `${data.category.name} | Center Circle`;
-  document.querySelector("#category-label").textContent = data.category.label;
   document.querySelector("#category-title").textContent = data.category.name;
-  document.querySelector("#category-description").textContent = data.category.description;
 
   const indexList = document.querySelector("#skill-index-list");
   const skillList = document.querySelector("#skill-list");
@@ -271,7 +269,6 @@ function truncateText(text, limit) {
 
 function renderError() {
   document.querySelector("#category-title").textContent = "ページを表示できません";
-  document.querySelector("#category-description").textContent = "時間をおいて、もう一度読み込んでください。";
   const message = document.createElement("p");
   message.className = "error-message";
   message.textContent = "技術データを読み込めませんでした。";
