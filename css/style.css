@@ -181,6 +181,10 @@ img {
   gap: 16px;
 }
 
+.skill__heading-content {
+  min-width: 0;
+}
+
 .skill__number {
   flex: 0 0 auto;
   padding-top: 5px;
@@ -237,9 +241,10 @@ img {
   font-size: 18px;
 }
 
-.skill__memo-preview {
+.skill__full-summary {
   margin: 0;
   font-size: 16px;
+  white-space: pre-line;
 }
 
 .skill__toggle {

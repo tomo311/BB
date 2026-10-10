@@ -2,7 +2,9 @@ const allowedCategories = new Set([
   "shooting-form",
   "finish",
   "dribble",
-  "post-play"
+  "warm-up",
+  "post-play",
+  "player"
 ]);
 
 const memoLabels = {
@@ -39,9 +41,10 @@ function renderCategory(data) {
 }
 
 function createSkill(skill, index) {
+  const skillId = `skill-${index + 1}`;
   const article = document.createElement("article");
   article.className = "skill";
-  article.id = skill.id;
+  article.id = skillId;
 
   const summary = document.createElement("div");
   summary.className = "skill__summary";
@@ -55,16 +58,23 @@ function createSkill(skill, index) {
 
   const heading = document.createElement("h2");
   heading.textContent = skill.name;
-  headingGroup.append(number, heading);
+
+  const headingContent = document.createElement("div");
+  headingContent.className = "skill__heading-content";
+  headingContent.append(heading);
+  headingGroup.append(number, headingContent);
 
   const preview = document.createElement("div");
   preview.className = "skill__preview";
 
-  const detailsId = `${skill.id}-details`;
+  const detailsId = `${skillId}-details`;
+  const videos = Array.isArray(skill.videos) ? skill.videos : [];
+  const previewVideos = videos.slice(0, 2);
+  if (previewVideos.length > 0) {
+    preview.append(createVideoList(previewVideos));
+  }
 
-  const memo = document.createElement("p");
-  memo.className = "skill__memo-preview";
-  memo.textContent = truncateText(skill.memo?.summary ?? "", 100);
+  const details = createDetails(skill, detailsId, 2);
 
   const toggle = document.createElement("button");
   toggle.className = "skill__toggle";
@@ -73,11 +83,11 @@ function createSkill(skill, index) {
   toggle.setAttribute("aria-controls", detailsId);
   toggle.textContent = "詳しく見る";
 
-  if (memo.textContent) preview.append(memo);
-  preview.append(toggle);
+  if (details.childElementCount > 0) {
+    headingContent.append(toggle);
+  }
   summary.append(headingGroup, preview);
 
-  const details = createDetails(skill, detailsId);
   const toggleDetails = () => {
     const willOpen = toggle.getAttribute("aria-expanded") !== "true";
     toggle.setAttribute("aria-expanded", String(willOpen));
@@ -85,20 +95,24 @@ function createSkill(skill, index) {
     details.hidden = !willOpen;
   };
 
-  toggle.addEventListener("click", toggleDetails);
+  if (details.childElementCount > 0) {
+    toggle.addEventListener("click", toggleDetails);
+  }
 
   article.append(summary, details);
   return article;
 }
 
-function createDetails(skill, detailsId) {
+function createDetails(skill, detailsId, visibleVideoCount) {
   const details = document.createElement("div");
   details.className = "skill__details";
   details.id = detailsId;
   details.hidden = true;
 
+  const videos = Array.isArray(skill.videos) ? skill.videos : [];
   const sections = [
-    createVideosSection(skill.videos),
+    createVideosSection(videos.slice(visibleVideoCount)),
+    createSummarySection(skill.memo?.summary),
     createPracticeSection(skill.practice),
     createMemoSection(skill.memo)
   ].filter(Boolean);
@@ -107,12 +121,19 @@ function createDetails(skill, detailsId) {
 }
 
 function createVideosSection(videos) {
-  const section = createDetailSection("参考動画");
+  if (!Array.isArray(videos) || videos.length === 0) return null;
+
+  const section = document.createElement("section");
+  section.className = "detail-section";
+  section.append(createVideoList(videos));
+  return section;
+}
+
+function createVideoList(videos) {
   const list = document.createElement("div");
   list.className = "video-list";
   list.append(...videos.map(createVideoItem));
-  section.append(list);
-  return section;
+  return list;
 }
 
 function createVideoItem(video) {
@@ -185,6 +206,17 @@ function createPracticeSection(practices) {
   return section;
 }
 
+function createSummarySection(summaryText) {
+  if (typeof summaryText !== "string" || !summaryText.trim()) return null;
+
+  const section = createDetailSection("サマリー");
+  const summary = document.createElement("p");
+  summary.className = "skill__full-summary";
+  summary.textContent = summaryText;
+  section.append(summary);
+  return section;
+}
+
 function createMemoSection(memo) {
   const entries = Object.entries(memoLabels).filter(
     ([key]) => typeof memo?.[key] === "string" && memo[key].trim()
@@ -239,11 +271,6 @@ function createEmbedUrl(video) {
   if (Number.isFinite(video.end)) params.set("end", video.end);
 
   return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.youtubeId)}?${params}`;
-}
-
-function truncateText(text, limit) {
-  const characters = Array.from(text);
-  return characters.length > limit ? `${characters.slice(0, limit).join("")}…` : text;
 }
 
 function renderError() {
