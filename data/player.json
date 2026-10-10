@@ -1,0 +1,20 @@
+{
+  "category": {
+    "id": "player",
+    "name": "プレイヤー"
+  },
+  "skills": [
+    {
+      "name": "Shai Gilgeous-Alexander",
+      "videos": [
+        { "title": "練習中", "youtubeId": "5s3OkLjK8XU", "start": 0},
+        { "title": "試合", "youtubeId": "-miUaGN47qA", "start": 0}
+      ]
+    },
+    {
+      "name": "Ball LaMelo",
+      "videos": [
+        { "title": "試合", "youtubeId": "WSuu3jtRSig", "start": 0}
+      ]
+    }  ]
+}

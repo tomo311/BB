@@ -6,38 +6,49 @@
   },
   "skills": [
     {
-      "id": "crossover",
-      "name": "クロスオーバー",
+      "name": "フロート",
       "videos": [
-        { "title": "クロスオーバーの基本", "youtubeId": "CMQp0bwjokw", "start": 32, "end": 91 }
-      ],
-      "practice": [
-        { "title": "その場で左右へ切り返す", "description": "腰を落とし、膝より低い位置を通して左右の手へボールを移す。" },
-        { "title": "一歩目までつなげる", "description": "切り返した直後、ボールと同じ方向へ大きく一歩を出す。", "video": { "title": "ドリブル姿勢の確認", "youtubeId": "CMQp0bwjokw", "start": 92, "end": 142 } }
-      ],
-      "memo": {
-        "summary": "左右の手へ素早くボールを移して進行方向を変える。ボールだけでなく、肩・目線・足で逆方向を見せることが大切。",
-        "usage": "ディフェンスが進行方向を止めに来たときや、正面で左右のずれを作りたいとき。",
-        "advantages": "シンプルな動きで方向を変え、そのままドライブやシュートへつなげられる。",
-        "points": "ボールを身体の前で大きくさらさず、低く速く切り返す。"
-      }
+        { "title": "相手との間合いをとりながら、仕掛ける準備の動き。", "youtubeId": "Ond1erNxW3A", "start": 0}
+      ]
     },
     {
-      "id": "in-and-out",
-      "name": "インサイドアウト",
+      "name": "ヘジ",
       "videos": [
-        { "title": "片手で方向を見せる", "youtubeId": "CMQp0bwjokw", "start": 143, "end": 204 }
-      ],
-      "practice": [
-        { "title": "ボールの外側を押す", "description": "片手のままボールを内側へ運び、手を外側へ回して元の方向へ戻す。" },
-        { "title": "身体のフェイクを合わせる", "description": "内側へ踏み出すように肩と目線を動かし、ボールを戻した方向へ抜く。" }
-      ],
-      "memo": {
-        "summary": "クロスオーバーに見せながら、ボールを持ち替えず同じ手で進むフェイク。次の一歩を素早く出せる。",
-        "usage": "ディフェンスがクロスオーバーを警戒しているときや、利き手のドライブを残したいとき。",
-        "advantages": "ボールを身体の前に長く出さず、同じ手のままスピードを上げられる。",
-        "points": "手のひらがボールの下へ入り、キャリーにならないよう上側から操作する。"
-      }
+        { "title": "フロートからのヘジ", "youtubeId": "YMltz6_GTSc", "start": 0},
+        { "title": "切れのあるヘジ → カウンターまで。", "youtubeId": "VEIPkP9vE1g", "start": 0}
+      ]
+    },
+        {
+      "name": "インバーテッド・レッグスルー",
+      "videos": [
+        { "title": "渡邊雄太解説・ドンチッチのフェイクありインバーテッド", "youtubeId": "ZbiMXck4KvM", "start": 405, "end": 500}
+      ]
+    },
+    {
+      "name": "ロール",
+      "videos": [
+        { "title": "カイリーもやる、ロール + 足を入れるテクニック", "youtubeId": "eYb3CA2xxBA", "start": 0, "end": 5},
+        { "title": "カイリーもやる、ロール + 足を入れるテクニック2", "youtubeId": "IevpBe7PZnQ", "start": 0}
+      ]
+    },
+    {
+      "name": "オフハンドの使い方",
+      "videos": [
+        { "title": "カイリーのバンプ", "youtubeId": "VniqFKht6tU", "start": 0}
+      ]
+    },
+        {
+      "name": "２回ドリブル",
+      "videos": [
+        { "title": "ジェイレン・ブラウン ロールからの２回", "youtubeId": "vpanorgVkOU", "start": 0}
+      ]
+    },
+    {
+      "name": "タイミングずらし",
+      "videos": [
+        { "title": "レッグスルーのタイミングずらし", "youtubeId": "4HSqfvM_7NQ", "start": 0},
+        { "title": "ドリブル開始時のタイミングずらし", "youtubeId": "S9PtEeo3k-4", "start": 0}
+      ]
     }
   ]
 }

@@ -6,39 +6,63 @@
   },
   "skills": [
     {
-      "id": "low-pick",
       "name": "ローピック",
       "videos": [
-        { "title": "ピックのタイミング", "youtubeId": "H1T8AbXSlZQ", "start": 12, "end": 72 }
+        { "title": "渡邊雄太解説：ローピック", "youtubeId": "ZbiMXck4KvM", "start": 118, "end": 140 }
       ],
       "memo": {
-        "summary": "0ステップを利用している。"
+        "summary": ""
       }
     },
     {
-      "id": "onehand-gather",
+      "name": "ジャブフェイク",
+      "videos": [
+        { "title": "ジャブ → 1ステップ", "youtubeId": "p8VBqNOv2hc", "start": 28, "end": 41 },
+        { "title": "ジャブ → 2ステップ", "youtubeId": "p8VBqNOv2hc", "start": 106, "end": 135 },
+        { "title": "ジャブ → 2ステップ（フェイク有）", "youtubeId": "p8VBqNOv2hc", "start": 153, "end": 176 },
+        { "title": "ジャブ → 2ステップ（ユーロ）", "youtubeId": "p8VBqNOv2hc", "start": 528, "end": 538 }
+      ],
+      "memo": {
+        "summary": "0ステップのジャブから、いくつかのムーブに派生できる。"
+      }
+    },
+    {
       "name": "ワンハンド・ギャザー",
       "videos": [
-        { "title": "リングの反対側を使う", "youtubeId": "H1T8AbXSlZQ", "start": 129, "end": 186 }
-      ]
+        { "title": "ワンハンド・ギャザー", "youtubeId": "Sd0n6JjWgEE", "start": 0},
+        { "title": "オフハンドの動き", "youtubeId": "MfA49CAoW5E", "start": 0}
+      ],
+      "memo": {
+        "summary": "基本的に、片手でボールをホールドして、もう片方でDFを押すために使う。"
+      }
     },
     {
-      "id": "hegi",
       "name": "ヘジ",
       "videos": [
-        { "title": "リングの反対側を使う", "youtubeId": "H1T8AbXSlZQ", "start": 129, "end": 186 }
+        { "title": "ヘジ→シュート", "youtubeId": "X6EdBKCgQj0", "start": 0}
       ]
     },
     {
-      "id": "step-back",
+      "name": "フィンガーロール",
+      "videos": [
+        { "title": "フックみたいな形でフィンガーロール、相手は届かない。カリーもよくやる。", "youtubeId": "xtIdBlyGR5M", "start": 0},
+        { "title": "フックみたいな形でフィンガーロール2、相手は届かない。カリーもよくやる。", "youtubeId": "pEZy_kAVIDc", "start": 55, "end": 83}
+      ]
+    },
+    {
       "name": "ステップバック",
       "videos": [
-        { "title": "リングの反対側を使う", "youtubeId": "H1T8AbXSlZQ", "start": 129, "end": 186 },
-        { "title": "リング", "youtubeId": "H1T8AbXSlZQ", "start": 129, "end": 186 }
+        { "title": "リングの反対側を使う", "youtubeId": "", "start": 129, "end": 186 }
       ],
       "memo": {
         "summary": "後ろに下がるステップバックと、横にずらすステップがある。\nどちらも足の動きは同じ。例：右のときは、左（ギャザー）→ 右 → 左。"
       }
+    },
+    {
+      "name": "ゴール下ピボット",
+      "videos": [
+        { "title": "ジェイレン・ブランソン", "youtubeId": "t1bkuGUOwnU", "start": 0}
+      ]
     }
   ]
 }

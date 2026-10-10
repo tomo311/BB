@@ -14,5 +14,13 @@
   {
     "id": "post-play",
     "name": "ポストプレー"
+  },
+  {
+    "id": "player",
+    "name": "プレイヤー"
+  },
+    {
+    "id": "warm-up",
+    "name": "ウォームアップ"
   }
 ]

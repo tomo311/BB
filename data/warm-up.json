@@ -1,0 +1,27 @@
+{
+  "category": {
+    "id": "warm-up",
+    "label": "WARM UP",
+    "name": "ウォームアップ"
+  },
+  "skills": [
+    {
+      "name": "低いドリブル",
+      "videos": [
+        { "title": "ペイトン・プリチャード", "youtubeId": "CkAh1fppfPc", "start": 0 }
+      ]
+    },
+    {
+      "name": "強くつくドリブル",
+      "videos": [
+        { "title": "強くつくドリブル → レッグスルー → ビハインド", "youtubeId": "131aOerfsHE", "start": 0 }
+      ]
+    },
+    {
+      "name": "逆サイドへの体重シフト",
+      "videos": [
+        { "title": "クロスオーバー → 逆サイドへの体重シフト", "youtubeId": "SdzGwYm8sYg", "start": 0}
+      ]
+    }
+  ]
+}
