@@ -25,4 +25,6 @@ python3 -m http.server 8001
 }
 ```
 
-`start`と`end`は秒数です。技術を追加したら、同じカテゴリ内で重複しない`id`を付けます。
+`start`と`end`は秒数です。技術を追加したら、同じカテゴリ内で重複しない`id`を付けます。`id`は各技術と詳細開閉の関連付けに使います。
+
+`practice`と`memo`は、内容がなければ省略できます。`memo`内の`summary`、`usage`、`advantages`、`points`も、空文字を入れず項目ごと省略してください。

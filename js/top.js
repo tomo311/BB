@@ -31,11 +31,7 @@ function createCategoryLink(category, index) {
   const name = document.createElement("span");
   name.className = "category-link__name";
   name.textContent = category.name;
-
-  const description = document.createElement("span");
-  description.className = "category-link__description";
-  description.textContent = category.description;
-  text.append(name, description);
+  text.append(name);
 
   const arrow = document.createElement("span");
   arrow.className = "category-link__arrow";

@@ -149,53 +149,14 @@ img {
   line-height: 1.35;
 }
 
-.category-link__description {
-  display: block;
-  margin-top: 6px;
-  color: var(--gray-500);
-  font-size: 13px;
-}
-
 .category-link__arrow {
   padding-right: 16px;
   font-size: 24px;
 }
 
 .content-layout {
-  display: grid;
-  grid-template-columns: 210px minmax(0, 1fr);
-  gap: 72px;
   padding-top: 48px;
   padding-bottom: 120px;
-}
-
-.skill-index {
-  position: sticky;
-  top: 32px;
-  align-self: start;
-}
-
-.skill-index ol {
-  margin: 18px 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--black);
-}
-
-.skill-index li {
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.skill-index a {
-  display: block;
-  padding: 11px 0;
-  font-size: 13px;
-  text-decoration: none;
-}
-
-.skill-index a:hover,
-.skill-index a:focus-visible {
-  color: var(--red);
 }
 
 .skill-list {
@@ -239,7 +200,6 @@ img {
   min-width: 0;
 }
 
-.skill__thumbnail-button,
 .video-button {
   position: relative;
   display: block;
@@ -252,11 +212,6 @@ img {
   cursor: pointer;
 }
 
-.skill__thumbnail-button {
-  aspect-ratio: 16 / 9;
-}
-
-.skill__thumbnail-button img,
 .video-button img {
   width: 100%;
   height: 100%;
@@ -264,7 +219,6 @@ img {
   transition: transform 220ms ease, filter 220ms ease;
 }
 
-.skill__thumbnail-button:hover img,
 .video-button:hover img {
   filter: brightness(0.82);
   transform: scale(1.015);
@@ -284,8 +238,8 @@ img {
 }
 
 .skill__memo-preview {
-  margin: 20px 0 0;
-  font-size: 14px;
+  margin: 0;
+  font-size: 16px;
 }
 
 .skill__toggle {
@@ -454,10 +408,6 @@ img {
     min-height: 108px;
   }
 
-  .category-link__description {
-    padding-right: 8px;
-  }
-
   .category-link__arrow {
     padding-right: 4px;
   }
@@ -467,20 +417,8 @@ img {
   }
 
   .content-layout {
-    display: block;
     padding-top: 32px;
     padding-bottom: 80px;
-  }
-
-  .skill-index {
-    position: static;
-    margin-bottom: 56px;
-  }
-
-  .skill-index ol {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 16px;
   }
 
   .skill__summary {

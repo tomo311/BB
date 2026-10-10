@@ -2,8 +2,7 @@
   "category": {
     "id": "shooting-form",
     "label": "SHOOTING FORM",
-    "name": "シュートフォーム",
-    "description": "毎回同じ動きを再現するために、足元からリリースまでを確認する。"
+    "name": "シュートフォーム"
   },
   "skills": [
     {

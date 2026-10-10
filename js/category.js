@@ -31,22 +31,11 @@ function renderCategory(data) {
   document.title = `${data.category.name} | Center Circle`;
   document.querySelector("#category-title").textContent = data.category.name;
 
-  const indexList = document.querySelector("#skill-index-list");
   const skillList = document.querySelector("#skill-list");
 
-  indexList.replaceChildren(...data.skills.map(createIndexItem));
   skillList.replaceChildren(
     ...data.skills.map((skill, index) => createSkill(skill, index))
   );
-}
-
-function createIndexItem(skill, index) {
-  const item = document.createElement("li");
-  const link = document.createElement("a");
-  link.href = `#${skill.id}`;
-  link.textContent = `${String(index + 1).padStart(2, "0")} ${skill.name}`;
-  item.append(link);
-  return item;
 }
 
 function createSkill(skill, index) {
@@ -72,11 +61,10 @@ function createSkill(skill, index) {
   preview.className = "skill__preview";
 
   const detailsId = `${skill.id}-details`;
-  const thumbnail = createPreviewThumbnail(skill.videos[0], skill.name, detailsId);
 
   const memo = document.createElement("p");
   memo.className = "skill__memo-preview";
-  memo.textContent = truncateText(skill.memo.summary, 100);
+  memo.textContent = truncateText(skill.memo?.summary ?? "", 100);
 
   const toggle = document.createElement("button");
   toggle.className = "skill__toggle";
@@ -85,7 +73,8 @@ function createSkill(skill, index) {
   toggle.setAttribute("aria-controls", detailsId);
   toggle.textContent = "詳しく見る";
 
-  preview.append(thumbnail, memo, toggle);
+  if (memo.textContent) preview.append(memo);
+  preview.append(toggle);
   summary.append(headingGroup, preview);
 
   const details = createDetails(skill, detailsId);
@@ -97,27 +86,9 @@ function createSkill(skill, index) {
   };
 
   toggle.addEventListener("click", toggleDetails);
-  thumbnail.addEventListener("click", toggleDetails);
 
   article.append(summary, details);
   return article;
-}
-
-function createPreviewThumbnail(video, skillName, detailsId) {
-  const button = document.createElement("button");
-  button.className = "skill__thumbnail-button";
-  button.type = "button";
-  button.setAttribute("aria-controls", detailsId);
-  button.setAttribute("aria-label", `${skillName}の詳細を開く`);
-
-  const image = createThumbnailImage(video, `${video.title}のサムネイル`);
-  const play = document.createElement("span");
-  play.className = "play-mark";
-  play.setAttribute("aria-hidden", "true");
-  play.textContent = "+";
-
-  button.append(image, play);
-  return button;
 }
 
 function createDetails(skill, detailsId) {
@@ -126,11 +97,12 @@ function createDetails(skill, detailsId) {
   details.id = detailsId;
   details.hidden = true;
 
-  details.append(
+  const sections = [
     createVideosSection(skill.videos),
     createPracticeSection(skill.practice),
     createMemoSection(skill.memo)
-  );
+  ].filter(Boolean);
+  details.append(...sections);
   return details;
 }
 
@@ -182,6 +154,8 @@ function createVideoPlayer(video) {
 }
 
 function createPracticeSection(practices) {
+  if (!Array.isArray(practices) || practices.length === 0) return null;
+
   const section = createDetailSection("練習方法");
   const list = document.createElement("ol");
   list.className = "practice-list";
@@ -212,11 +186,16 @@ function createPracticeSection(practices) {
 }
 
 function createMemoSection(memo) {
+  const entries = Object.entries(memoLabels).filter(
+    ([key]) => typeof memo?.[key] === "string" && memo[key].trim()
+  );
+  if (entries.length === 0) return null;
+
   const section = createDetailSection("メモ");
   const list = document.createElement("dl");
   list.className = "memo-list";
 
-  Object.entries(memoLabels).forEach(([key, label]) => {
+  entries.forEach(([key, label]) => {
     const row = document.createElement("div");
     row.className = "memo-row";
     const term = document.createElement("dt");

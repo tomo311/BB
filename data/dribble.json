@@ -2,8 +2,7 @@
   "category": {
     "id": "dribble",
     "label": "DRIBBLE TECHNIQUE",
-    "name": "ドリブルテクニック",
-    "description": "ボールを動かすだけでなく、身体と目線を使ってディフェンスを動かす。"
+    "name": "ドリブルテクニック"
   },
   "skills": [
     {

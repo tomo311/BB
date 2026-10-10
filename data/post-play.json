@@ -2,8 +2,7 @@
   "category": {
     "id": "post-play",
     "label": "POST PLAY",
-    "name": "ポストプレー",
-    "description": "身体でボールを守り、ディフェンスの重心を感じながらゴールへ近づく。"
+    "name": "ポストプレー"
   },
   "skills": [
     {

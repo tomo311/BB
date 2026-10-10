@@ -1,22 +1,18 @@
 [
   {
-    "id": "shooting-form",
-    "name": "シュートフォーム",
-    "description": "安定したシュートを作るための姿勢、手の使い方、リリース"
-  },
-  {
     "id": "finish",
-    "name": "フィニッシュ",
-    "description": "ゴール周辺で得点につなげるシュートとステップ"
+    "name": "フィニッシュ"
   },
   {
     "id": "dribble",
-    "name": "ドリブルテクニック",
-    "description": "相手を動かし、スペースを作るためのボールハンドリング"
+    "name": "ドリブル"
+  },
+  {
+    "id": "shooting-form",
+    "name": "シュート"
   },
   {
     "id": "post-play",
-    "name": "ポストプレー",
-    "description": "背中や身体を使ってゴールへ近づくためのプレー"
+    "name": "ポストプレー"
   }
 ]
