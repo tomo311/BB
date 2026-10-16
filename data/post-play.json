@@ -10,6 +10,13 @@
       "videos": [
         { "title": "両足着地 → ピボット", "youtubeId": "u-CXRcC9rJQ", "start": 0}
       ]
+    },
+    {
+      "name": "体を当ててからターン",
+      "videos": [
+        { "title": "シェイのポストプレイ1", "youtubeId": "h2DUpP0aJRc", "start": 324},
+        { "title": "シェイのポストプレイ2", "youtubeId": "h2DUpP0aJRc", "start": 345}
+      ]
     }
   ]
 }
