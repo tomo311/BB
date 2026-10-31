@@ -10,6 +10,13 @@
       "videos": [
         { "title": "キャッチとディップを同時にしろ。", "youtubeId": "MoOfVAMz19E", "start": 0 }
       ]
+    },
+    {
+      "name": "脱力したシュート（ラメロ・ボール）",
+      "videos": [
+        { "title": "ほとんどジャンプしない。脱力するが、右手はしっかりスナップ効かす。", "youtubeId": "L_SzlHPwUIc", "start": 24, "end": 94 },
+        { "title": "ほとんどジャンプしない。脱力するが、右手はしっかりスナップ効かす。", "youtubeId": "kNbgVblCtI0", "start": 150, "end": 210 }
+      ]
     }
   ]
 }
